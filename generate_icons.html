@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Generate Icons</title>
+</head>
+<body>
+    <canvas id="iconCanvas" width="128" height="128"></canvas>
+    <script>
+        const canvas = document.getElementById('iconCanvas');
+        const ctx = canvas.getContext('2d');
+        
+        // Draw background
+        ctx.fillStyle = '#1a73e8';
+        ctx.beginPath();
+        ctx.roundRect(0, 0, 128, 128, 20);
+        ctx.fill();
+        
+        // Draw envelope
+        ctx.fillStyle = 'white';
+        ctx.beginPath();
+        ctx.moveTo(32, 48);
+        ctx.lineTo(64, 32);
+        ctx.lineTo(96, 48);
+        ctx.lineTo(96, 80);
+        ctx.lineTo(64, 96);
+        ctx.lineTo(32, 80);
+        ctx.closePath();
+        ctx.fill();
+        
+        // Draw red part
+        ctx.fillStyle = '#ea4335';
+        ctx.beginPath();
+        ctx.moveTo(32, 48);
+        ctx.lineTo(64, 32);
+        ctx.lineTo(96, 48);
+        ctx.lineTo(64, 64);
+        ctx.closePath();
+        ctx.fill();
+        
+        // Draw blue part
+        ctx.fillStyle = '#4285f4';
+        ctx.beginPath();
+        ctx.moveTo(32, 80);
+        ctx.lineTo(64, 64);
+        ctx.lineTo(96, 80);
+        ctx.lineTo(64, 96);
+        ctx.closePath();
+        ctx.fill();
+        
+        // Function to download canvas as PNG
+        function downloadCanvas(size) {
+            const tempCanvas = document.createElement('canvas');
+            tempCanvas.width = size;
+            tempCanvas.height = size;
+            const tempCtx = tempCanvas.getContext('2d');
+            tempCtx.drawImage(canvas, 0, 0, size, size);
+            
+            const link = document.createElement('a');
+            link.download = `icon${size}.png`;
+            link.href = tempCanvas.toDataURL('image/png');
+            link.click();
+        }
+        
+        // Generate all sizes
+        downloadCanvas(16);
+        downloadCanvas(48);
+        downloadCanvas(128);
+    </script>
+</body>
+</html> 

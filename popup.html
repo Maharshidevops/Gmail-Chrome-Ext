@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Gmail Tracker</title>
+  <link rel="stylesheet" type="text/css" href="styles.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Gmail Tracker</h1>
+    
+    <div class="stats-container">
+      <div class="stat-box">
+        <h2>Unread Emails</h2>
+        <p id="unread-count">0</p>
+      </div>
+      <div class="stat-box">
+        <h2>Read Emails</h2>
+        <p id="read-count">0</p>
+      </div>
+      <div class="stat-box">
+        <h2>Active Devices</h2>
+        <p id="device-count">0</p>
+      </div>
+    </div>
+
+    <div class="device-list">
+      <h2>Active Devices</h2>
+      <div id="devices-list"></div>
+    </div>
+
+    <div class="email-status">
+      <h2>Email Status</h2>
+      <div class="status-filters">
+        <button class="filter-btn active" data-filter="all">All</button>
+        <button class="filter-btn" data-filter="unread">Unread</button>
+        <button class="filter-btn" data-filter="read">Read</button>
+      </div>
+      <div id="email-list"></div>
+    </div>
+
+    <div class="recent-activity">
+      <h2>Recent Activity</h2>
+      <div id="activity-list"></div>
+    </div>
+  </div>
+  <script src="popup.js"></script>
+</body>
+</html> 

@@ -1,0 +1,122 @@
+body {
+  width: 500px;
+  margin: 0;
+  padding: 16px;
+  font-family: Arial, sans-serif;
+  background-color: #f5f5f5;
+}
+
+.container {
+  background-color: white;
+  border-radius: 8px;
+  padding: 16px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+  color: #1a73e8;
+  margin: 0 0 16px 0;
+  font-size: 24px;
+  text-align: center;
+}
+
+.stats-container {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+  flex-wrap: wrap;
+}
+
+.stat-box {
+  background-color: #f8f9fa;
+  border-radius: 6px;
+  padding: 12px;
+  width: 30%;
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.stat-box h2 {
+  margin: 0 0 8px 0;
+  font-size: 14px;
+  color: #5f6368;
+}
+
+.stat-box p {
+  margin: 0;
+  font-size: 24px;
+  font-weight: bold;
+  color: #1a73e8;
+}
+
+.device-list, .email-status, .recent-activity {
+  background-color: #f8f9fa;
+  border-radius: 6px;
+  padding: 12px;
+  margin-bottom: 16px;
+}
+
+.device-list h2, .email-status h2, .recent-activity h2 {
+  margin: 0 0 12px 0;
+  font-size: 16px;
+  color: #5f6368;
+}
+
+.status-filters {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 12px;
+}
+
+.filter-btn {
+  padding: 6px 12px;
+  border: 1px solid #dadce0;
+  border-radius: 4px;
+  background: white;
+  color: #5f6368;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.filter-btn.active {
+  background: #1a73e8;
+  color: white;
+  border-color: #1a73e8;
+}
+
+#devices-list, #email-list, #activity-list {
+  max-height: 200px;
+  overflow-y: auto;
+}
+
+.device-item, .email-item, .activity-item {
+  padding: 8px;
+  border-bottom: 1px solid #e0e0e0;
+  font-size: 14px;
+}
+
+.device-item:last-child, .email-item:last-child, .activity-item:last-child {
+  border-bottom: none;
+}
+
+.email-item.unread {
+  background-color: #e8f0fe;
+}
+
+.email-item .status {
+  display: inline-block;
+  padding: 2px 6px;
+  border-radius: 3px;
+  font-size: 12px;
+  margin-left: 8px;
+}
+
+.email-item .status.unread {
+  background-color: #1a73e8;
+  color: white;
+}
+
+.email-item .status.read {
+  background-color: #34a853;
+  color: white;
+} 
